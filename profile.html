@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>profile</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="profile_css.css">
+
+	<!--- font  font-family: 'Courgette', cursive; font-family: 'Kanit', sans-serif;------>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kanit:wght@200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+
+	<!--- font  font-family: 'Courgette', cursive; font-family: 'Kanit', sans-serif; font-family: 'Alfa Slab One', cursive;------>
+	
+</head>
+<body>
+
+<div class="full_wrap">
+
+	<div class="sidebar">
+		<div class="top">
+			<div class="logo">
+				<!--<i class="bx bxl-codepen"></i>-->
+				<span>Rimon Mahamud Rony</span>
+			</div>
+			<i class="bx bx-menu" id="btn"></i>
+		</div>
+		<div class="user">
+			<img src="asset/rimon.jpg" alter="rimon.jpg" class="user_img">
+			<div class="mini_intro">
+				<p>
+				<span class="des">Programmer<br>Web Developer <br> Web Designer</span>
+			</p>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+		
+		<ul>
+			<li>
+				<a href="#Personal_details">
+					<i class='bx bxs-user-rectangle'></i>
+					<span class="sidebar_nav_item">Personal Details</span>
+				</a>
+				<span class="tooltip">Personal Details</span>
+			</li>
+
+			<li>
+				<a href="#projects">
+					<i class='bx bx-code-block'></i>
+					<span class="sidebar_nav_item">Skills</span>
+				</a>
+				<span class="tooltip">Skills</span>
+			</li>
+
+			<li>
+				<a href="">
+					<i class='bx bxs-coin-stack'></i>
+					<span class="sidebar_nav_item">Projects</span>
+				</a>
+				<span class="tooltip">Projects</span>
+			</li>
+
+			<li>
+				<a href="#research">
+					<i class='bx bx-book-reader'></i>
+					<span class="sidebar_nav_item">Research & Web Security</span>
+				</a>
+				<span class="tooltip">Research & Web Security</span>
+			</li>
+
+			<li>
+				<a href="">
+					<i class='bx bx-trophy'></i>
+					<span class="sidebar_nav_item">Achievements</span>
+				</a>
+				<span class="tooltip">Achievements</span>
+			</li>
+
+			<li>
+				<a href="">
+					<i class='bx bxs-briefcase-alt-2'></i>
+					<span class="sidebar_nav_item">Experiences</span>
+				</a>
+				<span class="tooltip">Experiences</span>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="main-content">
+		<div class="this_container">
+			<div class="container-fluid" style="margin-top: -5px;">
+				<nav class="navbar fixed-top navbar-expand-lg bg-light shadow p-1 mb-1 bg-info " style="border-radius: 2px; border-bottom: solid 1px deepskyblue;">
+				  <div class="container-fluid">
+				    <a class="navbar-brand" href="#"><img src="asset/rlab_color.png" height="40"></a>
+				      <div class="d-flex justfy-content-center">
+				        	<button class="btn btn-sm btn-outline-info home_button_group">Home</button>
+				        	<button class="btn btn-sm btn-outline-primary home_button_group_projects">Projects</button>
+				        	<button class="btn btn-sm btn-outline-danger home_button_group_profile">Profile</button>
+				        	<button class="btn btn-sm btn-outline-info home_button_group">Contacts</button>
+				      </div>
+				  </div>
+				</nav>
+			</div>
+
+			<div id="contents" class="container-fluid">
+				<div class="section container-fluid">
+					<div class="dynamic_txts_control">
+						<br><br>
+						<h4 class="dynamic-txts_intro">Welcome to Rimon's Lab. You will find me as a...</h4>
+						<br>
+						<div class="wrapper container">
+							    <ul class="dynamic-txts">
+							      <li><span style="color:yellow; ">Programmer</span></li>
+							      <li><span style="color:cyan;">Web Developer</span></li>
+							      <li><span style="color:#FE3104; text-shadow: 2px 5px 5px black;">Web Designer</span></li>
+							      <li><span> & Blogger</span></li>
+							    </ul>
+						  </div>
+					 </div>
+					 <div id="Personal_details"></div>
+					 <br>
+					<div id="about_me" class="container-fluid about_me">
+
+						<h3 class="section_intro">Personal Details</h3>
+						<h4 class="section_heading">ABOUT ME</h4>
+
+						<div  class="about_me_text container-fluid col-sm-6">
+							Hello, I desing and develop web based app and site as a full stack developer from Dhaka, Bangladesh. I have completed my B.Sc. in COMPUTER SCIENCE AND TELECOMMUNICATION ENGINEERING where my major is CSE. <br><br><br>
+							Through my portfolio, you will witness my creativity, problem-solving abilities, and my commitment to delivering high-quality solutions. Join me on this thrilling journey as I explore new opportunities in the world of web development with Laravel, PHP, React, and JavaScript development. Also have a strong problem solving and competetive programming skills in C and C++.
+							<br>
+
+							<a href="" ><p class="alert alert-sm alert-info resume">Download my resume </p></a>
+							<p style=" font-size: 30px;">
+								<i class='bx bxl-facebook-square boxcolorf'></i>
+								<i class='bx bxl-twitter boxcolort'></i>
+								<i class='bx bxl-instagram-alt boxcolori'></i>
+								<i class='bx bxl-youtube boxcolory' ></i>	
+								<i class='bx bxl-linkedin-square boxcolorf'></i>
+							</p>
+
+						</div>
+						<div class="about_me_img container col-sm-5">
+							<img src="asset/rimon.jpg" height="250">
+						</div>
+					</div>
+
+					<div id="education" class="container-fluid about_me">
+						<h4 class="section_heading">PERSONAL INFORMATION & EDUCATION</h4>
+						<div id="pd" class="about_me_text container-fluid col-sm-5">
+							<table>
+								<tr>
+									<td style="font-size: 20px; color: darkgreen;" colspan="2">
+										Rimon Mahamud Rony
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class='bx bxs-home'></i><box-icon type='solid' name='phone-call'></box-icon>
+									</td>
+									<td>
+										Dhaka, Bangladesh
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class='bx bxs-phone-call'></i>
+									</td>
+									<td>
+										01862117112, 01571-116952
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class='bx bxs-envelope'></i>
+									</td>
+									<td>
+										rimonronycste11@gmail.com
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class='bx bxl-github'></i>
+									</td>
+									<td>
+										<a href="https://github.com/Rimon-Mahamud-Rony">github/Rimon Mahamud Rony</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class='bx bxl-linkedin-square'></i>
+									</td>
+									<td>
+										<a href="https://www.linkedin.com/in/rimon-mahamud-rony-71184517a/">linked in/Rimon Mahamud Rony</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="about_me_text container-fluid col-sm-6">
+							<br>
+							<table class="table">
+								<tr>
+									<td style="width:6rem;">2016-2020</td>
+									<td>
+										B.Sc. in Computer Science and Telecommunication Engineering.
+										Noakhali Science and Technology University
+									</td>
+									
+									
+								</tr>
+								<tr>
+									<td>2014</td>
+									<td>
+										H.S.C, Science Group, Dhaka Board.
+									</td>
+									
+								</tr>
+								<tr>
+									<td>2012</td>
+									<td>
+										S.S.C, Science Group, Dhaka Board.
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="projects" class="about_me container-fluid">
+					<br>
+					<h3 class="section_intro">Coding Skills & Working Zone</h3>
+					<h4 class="section_heading">Technological Skills</h4>
+					<div class="container section_heading study">
+						<img src="asset/c.png" height="20">
+						<img src="asset/C++.png" height="25">
+						<img src="asset/dsa.png" height="25">
+						<img src="asset/oop.jpg" height="20">
+						<img src="asset/laravel.jpg" height="25">
+						<img src="asset/vue.png" height="25">
+						<img src="asset/react.png" height="25">
+						<img src="asset/bootstrap.png" height="25">
+						<img src="asset/mysqli.png" height="40">
+						<img src="asset/php.png" height="20">
+						<img src="asset/javascript.png" height="20">
+						<img src="asset/json.png" height="25">
+						<img src="asset/html5.png" height="25">
+						<img src="asset/css3.jpg" height="25">
+						<img src="asset/uikit.png" height="30">
+						<img src="asset/java.png" height="30">
+						<img src="asset/bash.png" height="30">
+						<img src="asset/kali.png" height="30">
+						<img src="asset/ubuntu.png" height="25">
+					</div>
+					<br>
+					<h4 class="section_heading">Programming and Problem Solving Skills</h4>
+					<br>
+					<div  class="about_me_text_programming container">
+						<ul>
+							<li>
+								Online Problem Solving:<br> 
+								Total 100+ online problems has been solved. UVA-63, LightOj-12 and others.
+							</li>
+							<li>
+								ACM ICPC Online Contest :<br>
+								Solve 2 problems in 2017, 3 problems in 2018, 2 problems in 2019 
+							</li>
+							<li>
+								Data Structure and Algorithm:<br>
+								Have a strong concept in Essential Data Structures and Algorithm in C++
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="projects" class="about_me container-fluid">
+					<h3 class="section_intro">Recent Projects</h3>
+					<section id="works" class="works container">
+					  <div class="container">
+
+					    <div class="row">
+
+
+					      <div class="col-sm-4">
+					        <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+					          <div class="img-wrapper">
+					            <img src="asset/forest.jpg" class="img-fluid" alt="this is a title">
+					            <div class="overlay">
+					              <div class="buttons">
+					                <a rel="gallery" class="fancybox a" href="">Online Link</a>
+					                <a target="_blank"c class="a"  href="single-portfolio.html">Details</a>
+					              </div>
+					            </div>
+					          </div>
+					          <figcaption>
+					            <h4>
+					              <a href="#">
+					                Ecommerce System 
+					              </a>
+					            </h4>
+					            <p class="project_description">
+					              <ul>
+					              	<li class="p_d_list_1">Raw php, Mysqli, Bootstrap</li>
+					              	<li class="p_d_list_2">admin</li>
+					              	<li class="p_d_list_2">Login</li>
+					              	<li class="p_d_list_2">dash board</li>
+					              </ul>
+					            </p>
+					            <button class="btn btn-sm btn-outline-info home_button_group">Details</button>
+					            <button class="btn btn-sm btn-outline-primary home_button_group_projects">Online Link</button>
+					          </figcaption>
+					        </figure>
+					      </div>
+
+					      <div class="col-sm-4">
+					        <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+					          <div class="img-wrapper">
+					            <img src="asset/forest.jpg" class="img-fluid" alt="this is a title">
+					            <div class="overlay">
+					              <div class="buttons">
+					                <a rel="gallery" class="fancybox a" href="">Online Link</a>
+					                <a target="_blank"c class="a"  href="single-portfolio.html">Details</a>
+					              </div>
+					            </div>
+					          </div>
+					          <figcaption>
+					            <h4>
+					              <a href="#">
+					                Ecommerce System 
+					              </a>
+					            </h4>
+					            <p class="project_description">
+					              <ul>
+					              	<li class="p_d_list_1">Raw php, Mysqli, Bootstrap</li>
+					              	<li class="p_d_list_2">admin</li>
+					              	<li class="p_d_list_2">Login</li>
+					              	<li class="p_d_list_2">dash board</li>
+					              </ul>
+					            </p>
+					            <button class="btn btn-sm btn-outline-info home_button_group">Details</button>
+					            <button class="btn btn-sm btn-outline-primary home_button_group_projects">Online Link</button>
+					          </figcaption>
+					        </figure>
+					      </div>
+
+					      <div class="col-sm-4">
+					        <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+					          <div class="img-wrapper">
+					            <img src="asset/forest.jpg" class="img-fluid" alt="this is a title">
+					            <div class="overlay">
+					              <div class="buttons">
+					                <a rel="gallery" class="fancybox a" href="">Online Link</a>
+					                <a target="_blank"c class="a"  href="single-portfolio.html">Details</a>
+					              </div>
+					            </div>
+					          </div>
+					          <figcaption>
+					            <h4>
+					              <a href="#">
+					                Ecommerce System 
+					              </a>
+					            </h4>
+					            <p class="project_description">
+					              <ul>
+					              	<li class="p_d_list_1">Raw php, Mysqli, Bootstrap</li>
+					              	<li class="p_d_list_2">admin</li>
+					              	<li class="p_d_list_2">Login</li>
+					              	<li class="p_d_list_2">dash board</li>
+					              </ul>
+					            </p>
+					            <button class="btn btn-sm btn-outline-info home_button_group">Details</button>
+					            <button class="btn btn-sm btn-outline-primary home_button_group_projects">Online Link</button>
+					          </figcaption>
+					        </figure>
+					      </div>
+
+					      
+					    </div>
+					    <a href="" class="project_list_button"><p class="alert alert-sm alert-danger resume">LIST OF ALL THE PROJECTS</p></a>
+					  </div>
+					</section> <!-- #works -->
+				</div>
+
+
+								<div id="achievements" class="about_me container-fluid">
+					<h3 class="section_intro">Achievements</h3>
+					<div  class="about_me_text container-fluid col-sm-7">
+						<ul>
+							<li>
+								 Intra-university programming contest ICE FEST, April 2018 (3rd Place).
+							</li>
+							<li>
+								 Intra-university programming contest, summer 2018 (4th Place),NSTU 
+							</li>
+							<li>
+								 Intra-University Junior Programming Contest, 2017 (8th place), NSTU 
+							</li>
+							<li>
+								 CUET inter-university regional programming contest, 2017 - 41st place.
+							</li>
+						</ul>
+					</div>
+					<div class="about_me_img_1 container col-sm-4">
+						<img src="asset/contest.jpg" width="300">
+					</div>
+				</div>
+
+
+				<div id="research" class="container-fluid about_me">
+
+					<h3 class="section_intro">Research</h3>
+
+					<div  class="about_me_text container-fluid col-sm-7">
+							Currently, I am doing research on Cloud Security and my thesis entitled with “ANALYSIS OF ATTACKS ON CLOUD 
+							ENVIRONMENT and SIMULATION OF DDOS”. 
+							Here are some points of my research that I want to share with you: <br><br>
+
+							<h6> Demystifying Cloud Computing and Cloud Security:</h6>
+							 Providing a clear and concise overview of cloud computing, its benefits, and its potential security challenges. Explaining the importance of securing cloud environments and the implications of successful attacks.<br><br>
+
+							 <h6> DDoS (Distributed Denial of Service) Attacks: </h6>Explored how DDoS attacks work, different types of DDoS attacks (e.g., volumetric, application layer), and their impact on cloud services and websites.<br><br>
+
+							<h6> Web Security on Cloud Computing: </h6>Investigating the vulnerabilities that web applications hosted in the cloud may face. Discussed common web application security flaws like SQL injection, Cross-Site Scripting (XSS), and how these can be mitigated.<br><br>
+
+							<h6> Man-in-the-Middle (MITM) Attacks: </h6>Explaining how MITM attacks can compromise data integrity and confidentiality in cloud environments. Discuss encryption and authentication methods to prevent MITM attacks.<br><br>
+
+							<h6> Email Bombing: </h6>Analyzed the impact of email bombing on cloud-based email services and the techniques used to carry out such attacks.<br><br>
+
+							<h6> RAT (Remote Access Trojan) and Trojan Attacks: </h6>Investigating the risks posed by RATs and Trojans in cloud systems. Discuss best practices for detecting and mitigating these types of attacks.<br><br> 
+							<br>
+					</div>
+					<div class="about_me_img_1 container col-sm-4">
+						<img src="asset/cloud.PNG" width="300">
+					</div>
+				</div>
+
+				<div id="achievements" class="about_me container-fluid">
+					<h3 class="section_intro">Experiences</h3>
+					<div  class="about_me_text container-fluid col-sm-7">
+						<ul>
+							<li>
+								 Worked as a trainer on 3 days long workshop named “LINUX and NETWORKING” on the behalf of CSTE CLUB - 2019.
+							</li>
+							<li>
+								 I have worked as VP on networking twice (2018-19 and 2019-20) in a row in CSTECLUB
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div class="footer container-fluid">
+				<br>
+				<p>All the rights reserved by Rimon Mahamud Rony | rimonronycste@gmail.com | 01862117112</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+	let btn = document.querySelector('#btn');
+	let sidebar = document.querySelector('.sidebar');
+
+	btn.onclick = function()
+	{
+		sidebar.classList.toggle('active');
+	};
+</script>
+
+</html>

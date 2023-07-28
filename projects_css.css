@@ -1,0 +1,502 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#root
+{
+	margin: 0;
+	padding: 0;
+}
+
+.a{text-decoration: none;}
+.l {list-style-type: none;}
+
+.home_button_group
+{
+	border-radius: 0px;
+	font-family: 'Kanit', sans-serif;
+	font-size: 11px;
+	margin-left: 5px;
+	letter-spacing: 2px;
+	color: black;
+}
+
+
+.home_button_group:hover
+{
+	font-size: 15px;
+	background-color:skyblue;
+	color: black;
+}
+
+.home_button_group_projects
+{
+	border-radius: 0px;
+	font-family: 'Kanit', sans-serif;
+	font-size: 11px;
+	margin-left: 5px;
+	letter-spacing: 2px;
+	color: blue;
+}
+
+
+.home_button_group_projects:hover
+{
+	font-size: 15px;
+}
+
+.home_button_group_profile
+{
+	border-radius: 0px;
+	font-family: 'Kanit', sans-serif;
+	font-size: 11px;
+	margin-left: 5px;
+	letter-spacing: 2px;
+}
+
+
+.home_button_group_profile:hover
+{
+	font-size: 15px;
+	background-color: red;
+	color: black;
+}
+
+
+.contents
+{
+	margin-top: 50px;
+	padding: 0.5rem;
+	font-family: 'Kanit', sans-serif;
+}
+
+.side_bar
+{
+	margin-left: -10px;
+	float: left;
+	position: relative;
+	position: fixed;
+	width: 160px;
+	background-color: aliceblue;
+	height: 100%;
+}
+
+.projects
+{
+	float: right;
+	width: calc(100% - 160px);
+}
+
+.top
+{
+	padding: 1rem;
+}
+
+.top h5 { 
+	font-size:1.2rem; 
+	color: darkgreen;
+}
+
+.top img {
+	padding: 1rem;
+	height: 100px;
+	border-radius: 50%;
+}
+.top h6 { 
+	font-size:0.8rem; 
+	line-height: 0.6rem;
+}
+
+.cat  {
+	padding: 1rem;
+}
+
+.cat h4 
+{
+	color: darkgreen;
+}
+
+.cat ul li 
+{
+	margin-left: -2rem;
+	line-height: 2rem;
+}
+
+.cat ul li:hover 
+{
+
+}
+
+.cat ul li a:hover
+{
+	color: darkgreen;
+} 
+
+
+
+.section{
+	float: left;
+	margin-top: 1rem;
+}
+
+
+.section_intro
+{
+	text-align: left;
+	color: black;
+	font-family: 'kanit', sans-serif;
+	letter-spacing: 1px;
+	font-size: 2rem;
+	font-weight: 500;
+	padding: 2%;
+	color: darkgreen;
+}
+
+.section_heading
+{
+	
+	margin-left: 2rem;
+	font-size: 1.2rem;
+}
+
+
+
+.about_me
+{
+	padding: 0.5rem;
+	float: left;
+	
+}
+.about_me_text
+{
+	padding: 2rem;
+	float: left;
+	font-size: 13px;
+	text-align: left;
+	border-radius: 5px;
+	font-family: 'Source Serif 4', serif;
+	color: #515A5A;
+	
+}
+
+.about_me_text_programming
+{
+	float: left;
+	font-size: 13px;
+	text-align: left;
+	border-radius: 5px;
+	font-family: 'Source Serif 4', serif;
+	color: #515A5A;
+}
+.about_me_text a {
+	text-decoration: none;
+	padding: 1rem;
+}
+
+.project_name
+{
+	text-align: center;
+	color: black;
+	font-family: 'kanit', sans-serif;
+	letter-spacing: 1px;
+	font-size: 2rem;
+	font-weight: 500;
+	padding: 2%;
+	color: darkgreen;
+}
+
+
+/* work----------------------------------------*/
+
+.works {
+  padding: 0rem;
+  font-family: 'Kanit', sans-serif;;
+}
+.works .block {
+  position: relative;
+  z-index: 99;
+}
+.works .block:hover .img-overly .overly {
+  opacity: 1;
+}
+.works .block h4 {
+  padding: 2px 2px;
+  margin-top: 0;
+  color: darkgreen;
+}
+
+.works .block .img-overly {
+  position: relative;
+  background: rgba(0, 0, 0, 0.85);
+}
+.works .block .img-overly img {
+  border-radius: 10px;
+}
+.works .block .img-overly .overly {
+  background: rgba(57, 181, 74, 0.9);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s all;
+}
+.works .block .img-overly .overly a {
+  position: absolute;
+  top: 45%;
+  left: 22%;
+}
+.works .block .img-overly .overly a i {
+  font-size: 30px;
+  color: #fff;
+}
+
+figure {
+  background: #fff;
+  margin-bottom: 45px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.04), 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+}
+figure .img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+figure img {
+  transform: scale3d(1, 1, 1);
+  transition: transform 400ms;
+}
+figure:hover img {
+  transform: scale3d(1.2, 1.2, 1);
+}
+figure:hover .overlay {
+  opacity: 1;
+}
+figure:hover .overlay .buttons a {
+  transform: scale3d(1, 1, 1);
+}
+figure .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all .7s ease;
+}
+figure .overlay a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 23px;
+  line-height: 1;
+  border: 1px solid #fff;
+  border-radius: 0px;
+  margin: 4px;
+  transform: scale3d(0, 0, 0);
+  transition: all 400ms;
+}
+figure .overlay a:hover {
+  text-decoration: none;
+}
+figure .overlay:hover a {
+  transform: scale3d(1, 1, 1);
+}
+figure .buttons {
+  margin-top: 40%;
+  text-align: center;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+figure .buttons a:hover {
+  background: #02bdd5;
+  border-color: #02bdd5;
+}
+figure .buttons a:focus {
+  text-decoration: none;
+}
+figure figcaption {
+  padding: 10px 15px;
+  margin-top: 0;
+  color: #666;
+}
+figure figcaption h4 {
+  margin: 0;
+  font-size: 1rem;
+
+}
+figure figcaption h4 a {
+  color: darkgreen;
+  text-decoration: none;
+}
+figure figcaption p {
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-top: 5px;
+
+}
+
+.project_description{
+  font-size: 10px;
+  color: black;
+  
+}
+
+.project_description ul li{
+	text-decoration: none;
+}
+
+.p_d_list_1
+{
+	padding: 0px;
+	list-style-type: none;
+	color: red;
+	
+	font-size: 13px;
+}
+.p_d_list_2
+{
+	padding: 0px;
+	list-style-type: none;
+	color: gray;
+	
+	font-size: 13px;
+}
+
+.p_d_list_2 ul li {
+	padding: 0px;
+	list-style-type: none;
+	font-size: 13px;
+}
+
+/*------------------------------*/
+.carousel_control
+{
+	margin-top: -3rem;
+	padding: 3rem;
+	width: 80%;
+	text-align: center;	
+
+}
+
+.carousel_control img
+{
+
+}
+
+.project_details_description
+{
+	padding: 1rem;
+}
+
+.project_details_description ul li
+{
+	margin-left: 2rem;
+}
+
+.project_details_description ul li p
+{
+	font-size: .8rem;
+	font-family: 'Source Serif 4', serif;
+}
+
+.project_details_description ul li h6
+{
+	color: darkblue;
+}
+
+
+.footer
+{
+	float: right;
+	position: relative;
+	height: 20%;
+	margin-left: 160px;
+	width: calc(100% - 160px);
+	color: black;
+	margin-bottom: -10px;
+	font-family: 'Kanit', sans-serif;
+	text-align: center;
+	background-color: whitesmoke;
+}
+
+.a_back
+{
+	text-decoration: none;
+	font-size: .8rem;
+	border-radius: 0;
+}
+
+.a_back:hover
+{
+	font-size: 1rem;
+	padding: 0.3rem;
+	border-radius: 5px;
+}
+
+
+.boxcolori
+{
+
+}
+.boxcolori:hover
+{
+	color: #F5448A;
+	font-size: 40px;
+
+}
+
+.boxcolorf
+{
+
+}
+.boxcolorf:hover
+{
+	color: blue;
+	font-size: 40px;
+
+}
+
+.boxcolort
+{
+
+}
+.boxcolort:hover
+{
+	color: deepskyblue;
+	font-size: 40px;
+
+}
+
+.boxcolory
+{
+
+}
+.boxcolory:hover
+{
+	color: red;
+	font-size: 40px;
+
+}
+
+.f_left
+{
+	float: left;
+}
+
+.email
+{
+}
+
+.email h4
+{
+	font-size: 1rem;
+	border-radius: 0px;
+}
+
+.email form 
+{
+		
+}
