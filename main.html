@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Datatype:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9603d0f2dd.js" crossorigin="anonymous"></script>
+</head>
+<body class="h-screen overflow-hidden [font-family:'Anaheim',sans-serif] bg-white text-black dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div class="flex h-screen overflow-hidden relative">
+        <!-- LEFT SIDE (Details) -->
+        <div class="w-full sm:w-9/12 relative bg-cover bg-center" style="background-image: url('image/bg.jpg');">
+            <div class="absolute inset-0 bg-white/80 dark:bg-gray-900/90 backdrop-blur-xs transition-colors duration-300"></div>
+            <div class="relative z-10 h-full flex flex-col">
+
+                <!-- COMMON HEADER (shared by Profile & Work tabs) -->
+                <div class="p-4 border-b border-white dark:border-gray-700 flex  sm:flex-row sm:items-center justify-between gap-3 transition-colors duration-300">
+
+                    <!-- Tabs available directly in the details section -->
+                    <div class="flex gap-2 sm:ml-20">
+                        <button 
+                        type="button" 
+                        class="tab-btn detail-tab-btn text-slate-500 dark:text-slate-300 border border-black/30 dark:border-white/30 px-3 py-1 text-sm font-semibold rounded-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition" 
+                        data-tab="profile">
+                        Profile
+                        </button>
+                        <button type="button" 
+                        class="tab-btn detail-tab-btn text-slate-500  dark:text-slate-300 border border-black/30 dark:border-white/30 px-3 py-1 text-sm font-semibold rounded-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition" data-tab="work">Work</button>
+                    </div>
+
+                    <div class="flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2">
+                            <!-- Theme toggle -->
+                            <button id="theme-toggle-btn" aria-label="Toggle dark mode" class="shrink-0 flex items-center justify-center w-9 h-9 rounded-full border border-black/70 dark:border-white/40 bg-white/70 dark:bg-gray-800 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">
+                                <!-- Moon icon: shown in light mode, click to go dark -->
+                                <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                                </svg>
+                                <!-- Sun icon: shown in dark mode, click to go light -->
+                                <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 hidden">
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M12 2v2"></path>
+                                    <path d="M12 20v2"></path>
+                                    <path d="m4.93 4.93 1.41 1.41"></path>
+                                    <path d="m17.66 17.66 1.41 1.41"></path>
+                                    <path d="M2 12h2"></path>
+                                    <path d="M20 12h2"></path>
+                                    <path d="m6.34 17.66-1.41 1.41"></path>
+                                    <path d="m19.07 4.93-1.41 1.41"></path>
+                                </svg>
+                            </button>
+                            <!-- Mobile-only button to open the profile drawer -->
+                            <button id="drawer-open-btn" aria-label="Open profile panel" 
+                            class="sm:hidden shrink-0 flex items-center justify-center w-9 h-9 rounded-full border border-black/70 dark:border-white/40 bg-white/70 dark:bg-gray-800 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                    <path d="M20 21a8 8 0 0 0-16 0"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROFILE TAB CONTENT -->
+                <div id="profile" class="detail-panel flex-1 overflow-y-auto">
+                    <div class="w-full flex flex-col sm:flex-row justify-start sm:justify-between items-center text-start px-16 border-b border-white dark:border-gray-700 bg-gray-700">
+                        <p><i class="fa-solid fa-phone"></i> 01862117112</p>
+                        <p>
+                            <i class="fa-brands fa-github"></i>
+                            <a class="text-blue-500 underline hover:text-blue-300 cursor-pointer">
+                                 github.com/rimon-mahamud-rony
+                            </a>
+                        </p>
+                        <p><i class="fa-solid fa-envelope"></i> rimonronyinfo@gmail.com</p>
+                        <p>
+                            <a class="text-blue-500 underline hover:text-blue-300 cursor-pointer">
+                                <i class="fa-brands fa-linkedin"></i> linkedin.com/rimon-mahamud-rony-71184517a
+                            </a>
+                        </p>
+                    </div>
+                    <div class="mx-2 sm:mx-16">
+
+                        <div class="py-2">
+                            <h2 class="text-2xl font-bold mb-1">Bio</h2>
+                            <p>Hello & hi . . . . . <span class="inline-block text-4xl animate-bounce">👋</span></p>
+                            <p class="py-1">This is <span class="font-semibold text-xl">Rimon Mahamud Rony</span>, a Software Engineer currently working as an Assistant Programmer in the Ministry of Public Administration of Bangladesh Government, based in Dhaka.</p>
+                            <p class="py-1">Beyond my role in the public sector, I have hands-on experience working on industry-level software products as full time software engineer and through project-based development.</p>
+                            <p class="py-1">My core interest lies in software engineering, system design, and developing impactful digital solutions.</p>
+                        </div>
+                        <div class="py-4">
+                            <h2 class="text-lg font-bold mb-2">Work and Education</h2>
+                            <p>
+                                I've done my graduation in BSc. Engineering in Computer Science and Telecommunication Engineering from Noakhali Science and Technology University. Currently seeking my MSc. Engineering degree from BUET. I'm also an Assistant Professor at NSTU.
+                                I've  been programming since age thirteen and prefer C#, though I am flexible with any language.
+
+                            </p>
+                        </div>
+                        <div class="py-4">
+                            <h2 class="text-lg font-bold mb-2">Specialty</h2>
+                            <p>Data Structures and Algorithms, Artificial Intelligence, Database Management Systems, Wireless Communication, Graphics and Architectural design.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- WORK TAB CONTENT -->
+                <div id="work" class="detail-panel flex-1 overflow-y-auto p-6 space-y-6 sm:mx-1 hidden">
+                    <div class="py-4 px-4 sm:px-8">
+                        <h2 class="text-2xl font-bold mb-3">My Expertise on</h2>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center gap-2 hover:text-blue-600">
+                                    <span class="text-green-600 font-bold">✓</span> 100+ LeetCode Problems solved.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">Next.js & React</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">Node.js & NestJS</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">PHP 8.3 & Laravel 13</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">MySQL, PostgreSQL & MongoDB</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">DSA</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">REST API</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">JWT / OAuth</button>
+                            <button class="border border-black dark:border-gray-400 dark:text-gray-200 py-1 px-3 text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">Git & GitHub</button>
+                        </div>
+                    </div>
+                    <div class="py-4 px-8">
+                        <h2 class="text-xl font-bold mb-2">NSTU Result Creator (NRC) | 
+                            <a href="#" class="text-blue-500">Live Link</a> | <a href="#" class="text-orange-400">Github</a>
+                        </h2>
+                        <p>NSTU Result Creator & Student Information Management System...</p>
+                        <h2 class="text-lg font-bold mt-2 mb-2">Key Features</h2>
+                        <ul class="list-disc px-4">
+                            <li>Standalone and Client-Server based.</li>
+                            <li>Four user groups...</li>
+                        </ul>
+                        <div class="flex gap-3 pt-4">
+                            <button id="open-modal-btn" class="px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition">Live Demo</button>
+                            <button id="load-screenshot-btn" class="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-sm hover:bg-gray-900 dark:hover:bg-gray-600 transition">Load Screenshot</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (Profile panel) -->
+        <!-- Desktop: static sidebar. Mobile: fixed drawer sliding in from the right, hidden by default (translate-x-full). -->
+        <div id="right-panel"
+             class="fixed sm:relative top-0 right-0 z-40 sm:z-auto h-full sm:h-screen w-[85%] max-w-xs sm:w-3/12 sm:max-w-none bg-gray-300 dark:bg-gray-800 p-4 flex flex-col items-center transform translate-x-full sm:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl sm:shadow-none">
+            <!-- Mobile-only close button: this is the ONLY control that closes the drawer -->
+            <button id="drawer-close-btn" aria-label="Close profile panel" class="sm:hidden self-end mb-2 w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="mb-4">
+                <img src="image/logo.png" class="h-8 w-20">
+            </div>
+
+            <!-- Tabs inside the drawer / sidebar -->
+            <div class="flex gap-x-1 mb-2">
+                <button type="button" class="tab-btn text-blue-500 px-1 py-1 font-semibold" data-tab="profile">Profile</button>
+                <span class="px-1 py-1 font-semibold text-slate-500 dark:text-slate-300">|</span>
+                <button type="button" class="tab-btn text-slate-500 dark:text-slate-300 px-1 py-1 font-semibold" data-tab="work">Work</button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto [font-family:'Datatype',monospace] w-full">
+                <div class="flex flex-row justify-center">
+                    <img src="image/profile.jpeg" class="w-28 sm:w-36 h-28 sm:h-36 rounded-full object-cover m-1">
+                </div>
+                <!-- Sidebar Profile Content -->
+                <div id="profile_0" class="sidebar-panel">
+                    <div class="text-center py-2">
+                        <h2 class="text-base sm:text-xl mb-2 text-black dark:text-white">
+                            <span class="text-xl sm:text-4xl">R</span>imon Mahamud Rony
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-300">Assistant Programmer</p>
+                        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-300">Ministry of Public Administration, Bangladesh</p>
+                    </div>
+                    <div class="w-full max-w-2xl px-1">
+                        <h2 class="text-xl font-bold text-center py-4 text-black dark:text-white">Career Timeline</h2>
+                        <div class="relative">
+                            <div class="absolute left-4 top-4 bottom-0 w-[1px] bg-black dark:bg-gray-400"></div>
+
+                            <div class="flex mb-3 relative">
+                                <div class="w-8 relative flex justify-center">
+                                    <div class="w-4 h-4 bg-slate-500 rounded-full mt-0.5 z-10 border-2 border-white dark:border-gray-800"></div>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-base font-semibold">Jan, 2026 - present</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Assistant Programmer, MoPA</p>
+                                </div>
+                            </div>
+
+
+                            <div class="flex mb-3 relative">
+                                <div class="w-8 relative flex justify-center">
+                                    <div class="w-4 h-4 bg-slate-500 rounded-full mt-0.5 z-10 border-2 border-white dark:border-gray-800"></div>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-base font-semibold">June, 2026 - present</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Founder and Technical Lead @ 
+                                        <a class="text-blue-500 hover:text-blue-600 underline" href="devstellixsoft.com">DevStellix</a> 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex mb-3 relative">
+                                <div class="w-8 relative flex justify-center">
+                                    <div class="w-4 h-4 bg-slate-500 rounded-full mt-0.5 z-10 border-2 border-white dark:border-gray-800"></div>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-base font-semibold">Sep, 2024 - Jan, 2025</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Software Engineer @ 
+                                        <a class="text-blue-500 hover:text-blue-600 underline" href="www.metademy.us">Metademy</a> 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex mb-3 relative">
+                                <div class="w-8 relative flex justify-center">
+                                    <div class="w-4 h-4 bg-slate-500 rounded-full mt-0.5 z-10 border-2 border-white dark:border-gray-800"></div>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-base font-semibold">2023 - 2024</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Software Engineer @ 
+                                        <a class="text-blue-500 hover:text-blue-600 underline" href="www.rootdevs.com">RootDevs</a> 
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar Work Content -->
+                <div id="work_0" class="sidebar-panel hidden text-center py-10 flex flex-col justify-center items-center h-[50vh] text-sm gap-y-8">
+                    <div class="text-start">
+                        LinkedIn : <a href="linkedin.com/rimon-mahamud-rony-71184517a" class="text-blue-500 underline">linkedin.com/rimon-mahamud-rony </a>
+                        <br/>  <br/>
+                        GitHub   : <a href="github.com/rimon-mahamud-rony" class="text-blue-500 underline">github.com/rimon-mahamud-rony </a> 
+                        <br/>  <br/>
+                        Email   : <a href="github.com/rimon-mahamud-rony" class="text-blue-500 underline">rimonronyinfo@gmail.com</a> 
+                        <br/>  <br/>
+                        Mobile   : <a href="github.com/rimon-mahamud-rony" class="text-blue-500 underline">+8801862-117112</a> 
+                    </div>
+                    <div class="text-slate-500">
+                        <p>বিনা যুদ্ধে নাহি দিব ছাড়,</p> <p>  সূচাগ্র মেদিনীর অধিকার !</p>
+                        <br>
+                        <p>No, I dont ever give up!</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="mt-auto">
+                <p class="text-xs">rimonronycste11@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Backdrop for the mobile drawer (visual dim only — does not close the drawer) -->
+        <div id="drawer-backdrop" class="hidden fixed inset-0 bg-black/50 z-30 sm:hidden"></div>
+    </div>
+
+    <!-- MODAL (pure Tailwind) -->
+    <div id="modal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+        <div class="bg-white dark:bg-gray-800 w-full max-w-6xl h-[90%] rounded-2xl shadow-xl relative overflow-hidden flex flex-col">
+            <div class="flex justify-between items-center p-3 border-b border-gray-200 dark:border-gray-700 shrink-0">
+                <h2 class="font-semibold text-gray-700 dark:text-gray-200">My Website Preview</h2>
+                <button id="close-modal-btn" aria-label="Close preview" class="w-8 h-8 flex items-center justify-center rounded-full text-gray-500 dark:text-gray-300 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-500/20 transition">✕</button>
+            </div>
+            <iframe src="https://shatiganj-upozilla-app.vercel.app/" class="w-full flex-1"></iframe>
+        </div>
+    </div>
+
+    <footer class="w-full shrink-0 border-t border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 text-xs sm:text-sm py-2 px-4 flex flex-col sm:flex-row items-center justify-between gap-1 transition-colors duration-300">
+    <p>&copy; <span id="footer-year"></span> Rimon Mahamud Rony. All rights reserved.</p>
+    <p class="[font-family:'Datatype',monospace] text-slate-500 dark:text-slate-400">Built with Tailwind CSS &amp; jQuery</p>
+</footer>
+
+    <script>
+        $(function () {
+
+            /* ---------- Theme (light / dark) ---------- */
+            function setTheme(theme) {
+                if (theme === 'dark') {
+                    $('html').addClass('dark');
+                    $('#icon-moon').addClass('hidden');
+                    $('#icon-sun').removeClass('hidden');
+                } else {
+                    $('html').removeClass('dark');
+                    $('#icon-sun').addClass('hidden');
+                    $('#icon-moon').removeClass('hidden');
+                }
+                localStorage.setItem('theme', theme);
+            }
+
+            var savedTheme = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            setTheme(savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light'));
+
+            $('#theme-toggle-btn').on('click', function () {
+                var isDark = $('html').hasClass('dark');
+                setTheme(isDark ? 'light' : 'dark');
+            });
+
+            /* ---------- Tabs (details header + drawer) ---------- */
+            function showTab(tab) {
+                // Details panels (left)
+                $('.detail-panel').addClass('hidden');
+                $('#' + tab).removeClass('hidden');
+
+                // Sidebar / drawer panels (right)
+                $('.sidebar-panel').addClass('hidden');
+                $('#' + tab + '_0').removeClass('hidden');
+
+                // Sidebar/drawer tab buttons: blue text marks the active tab
+                $('.tab-btn').not('.detail-tab-btn')
+                    .removeClass('text-blue-500')
+                    .addClass('text-slate-500 dark:text-slate-300');
+                $('.tab-btn[data-tab="' + tab + '"]').not('.detail-tab-btn')
+                    .removeClass('text-slate-500 dark:text-slate-300')
+                    .addClass('text-blue-500');
+
+                // Header (details) tab buttons: black/white filled bg marks the active tab
+                $('.detail-tab-btn')
+                    .removeClass('bg-black text-white dark:bg-white dark:text-black')
+                    .addClass('text-slate-500 dark:text-slate-300');
+                $('.detail-tab-btn[data-tab="' + tab + '"]')
+                    .removeClass('text-slate-500 dark:text-slate-300')
+                    .addClass('bg-black text-white dark:bg-white dark:text-black');
+
+                // Shared header title
+                $('#header-title-text').text(tab === 'profile' ? 'Profile' : 'Work');
+            }
+
+            $('.tab-btn').on('click', function () {
+                showTab($(this).data('tab'));
+            });
+
+            /* ---------- Mobile drawer ---------- */
+            $('#drawer-open-btn').on('click', function () {
+                $('#right-panel').removeClass('translate-x-full').addClass('translate-x-0');
+                $('#drawer-backdrop').removeClass('hidden');
+            });
+
+            // ONLY the cross (close) button closes the drawer
+            $('#drawer-close-btn').on('click', function () {
+                $('#right-panel').addClass('translate-x-full').removeClass('translate-x-0');
+                $('#drawer-backdrop').addClass('hidden');
+            });
+
+            /* ---------- Modal ---------- */
+            $('#open-modal-btn').on('click', function () {
+                $('#modal').removeClass('hidden');
+            });
+            $('#close-modal-btn').on('click', function () {
+                $('#modal').addClass('hidden');
+            });
+            $('#modal').on('click', function (e) {
+                if (e.target === this) {
+                    $('#modal').addClass('hidden');
+                }
+            });
+
+            // Initial state
+            showTab('profile');
+            $('#footer-year').text(new Date().getFullYear());
+        });
+    </script>
+</body>
+</html>
